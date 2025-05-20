@@ -1,0 +1,104 @@
+2025-05-18 18:10:43,808 - INFO - Initializing Canvas Scraper for https://ycp.instructure.com/
+2025-05-18 18:10:43,808 - INFO - Authentication provider detected: microsoft
+2025-05-18 18:10:43,809 - INFO - 
+Starting Canvas scraper...
+2025-05-18 18:10:43,809 - INFO - This will open a Chrome browser window and log in to Canvas.
+2025-05-18 18:10:43,809 - INFO - Please do not close the browser window during the process.
+2025-05-18 18:10:43,809 - INFO - ============================================================
+2025-05-18 18:10:43,809 - INFO - Log file is being saved to: c:\Users\harve\Documents\GitHub\CanvasScrapper\canvas_scraper_20250518_180930.log
+2025-05-18 18:10:43,816 - INFO - Screenshots will be saved to: c:\Users\harve\Documents\GitHub\CanvasScrapper\screenshots
+2025-05-18 18:10:43,816 - INFO - Created download directory: c:\Users\harve\Documents\GitHub\CanvasScrapper\Canvas_Downloads
+2025-05-18 18:10:43,816 - INFO - Initializing Chrome browser...
+2025-05-18 18:10:43,816 - INFO - ====== WebDriver manager ======
+2025-05-18 18:10:45,343 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-18 18:10:45,765 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-18 18:10:46,097 - INFO - Driver [C:\Users\harve\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-18 18:10:47,331 - INFO - Navigating to https://ycp.instructure.com...
+2025-05-18 18:10:53,020 - INFO - Screenshot saved to screenshots/login_page_20250518_181052.png
+2025-05-18 18:10:53,021 - INFO - Detected authentication provider: microsoft
+2025-05-18 18:10:53,021 - INFO - Logging in with Microsoft authentication...
+2025-05-18 18:10:53,021 - INFO - Waiting for email input field...
+2025-05-18 18:10:53,029 - INFO - Entering email...
+2025-05-18 18:10:55,120 - INFO - Clicking next button...
+2025-05-18 18:10:57,618 - INFO - Screenshot saved to screenshots/after_email_20250518_181057.png
+2025-05-18 18:10:57,618 - INFO - Waiting for password input field...
+2025-05-18 18:10:57,625 - INFO - Entering password...
+2025-05-18 18:11:02,561 - INFO - Screenshot saved to screenshots/after_password_20250518_181102.png
+2025-05-18 18:11:02,561 - INFO - Looking for 'Stay signed in' prompt...
+2025-05-18 18:11:02,901 - INFO - Screenshot saved to screenshots/before_stay_signed_in_20250518_181102.png
+2025-05-18 18:11:02,916 - INFO - Clicking 'Yes' on 'Stay signed in' prompt...
+2025-05-18 18:11:05,410 - INFO - Looking for additional confirmation prompt...
+2025-05-18 18:11:10,454 - INFO - Screenshot saved to screenshots/before_additional_confirmation_20250518_181105.png
+2025-05-18 18:11:25,867 - INFO - No additional confirmation prompt detected, continuing...
+2025-05-18 18:11:25,869 - INFO - Waiting for dashboard to load...
+2025-05-18 18:11:25,889 - INFO - Successfully logged in to Canvas!
+2025-05-18 18:11:26,012 - INFO - Screenshot saved to screenshots/dashboard_20250518_181125.png
+2025-05-18 18:11:26,020 - INFO - Fetching available courses...
+2025-05-18 18:11:29,254 - INFO - Screenshot saved to screenshots/courses_page_20250518_181129.png
+2025-05-18 18:11:29,255 - INFO - Waiting for course cards to load...
+2025-05-18 18:11:44,337 - ERROR - Error fetching courses: Message: 
+Stacktrace:
+	GetHandleVerifier [0x009EFC83+61635]
+	GetHandleVerifier [0x009EFCC4+61700]
+	(No symbol) [0x008105D3]
+	(No symbol) [0x0085899E]
+	(No symbol) [0x00858D3B]
+	(No symbol) [0x008A0E12]
+	(No symbol) [0x0087D2E4]
+	(No symbol) [0x0089E61B]
+	(No symbol) [0x0087D096]
+	(No symbol) [0x0084C840]
+	(No symbol) [0x0084D6A4]
+	GetHandleVerifier [0x00C745A3+2701795]
+	GetHandleVerifier [0x00C6FD26+2683238]
+	GetHandleVerifier [0x00C8AA6E+2793134]
+	GetHandleVerifier [0x00A06945+155013]
+	GetHandleVerifier [0x00A0D02D+181357]
+	GetHandleVerifier [0x009F74D8+92440]
+	GetHandleVerifier [0x009F7680+92864]
+	GetHandleVerifier [0x009E2070+5296]
+	BaseThreadInitThunk [0x76D25D49+25]
+	RtlInitializeExceptionChain [0x7781CFFB+107]
+	RtlGetAppContainerNamedObjectPath [0x7781CF81+561]
+
+2025-05-18 18:11:44,350 - ERROR - Traceback (most recent call last):
+  File "c:\Users\harve\Documents\GitHub\CanvasScrapper\CanvasScraper.py", line 479, in get_courses
+    WebDriverWait(self.driver, 15).until(
+  File "C:\Users\harve\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x009EFC83+61635]
+	GetHandleVerifier [0x009EFCC4+61700]
+	(No symbol) [0x008105D3]
+	(No symbol) [0x0085899E]
+	(No symbol) [0x00858D3B]
+	(No symbol) [0x008A0E12]
+	(No symbol) [0x0087D2E4]
+	(No symbol) [0x0089E61B]
+	(No symbol) [0x0087D096]
+	(No symbol) [0x0084C840]
+	(No symbol) [0x0084D6A4]
+	GetHandleVerifier [0x00C745A3+2701795]
+	GetHandleVerifier [0x00C6FD26+2683238]
+	GetHandleVerifier [0x00C8AA6E+2793134]
+	GetHandleVerifier [0x00A06945+155013]
+	GetHandleVerifier [0x00A0D02D+181357]
+	GetHandleVerifier [0x009F74D8+92440]
+	GetHandleVerifier [0x009F7680+92864]
+	GetHandleVerifier [0x009E2070+5296]
+	BaseThreadInitThunk [0x76D25D49+25]
+	RtlInitializeExceptionChain [0x7781CFFB+107]
+	RtlGetAppContainerNamedObjectPath [0x7781CF81+561]
+
+
+2025-05-18 18:11:44,461 - INFO - Screenshot saved to screenshots/courses_error_20250518_181144.png
+2025-05-18 18:11:44,461 - ERROR - No courses found. Exiting.
+2025-05-18 18:11:44,462 - INFO - Closing browser...
+2025-05-18 18:11:46,711 - INFO - Browser closed.
+2025-05-18 18:11:46,712 - INFO - 
+============================================================
+2025-05-18 18:11:46,712 - INFO - Canvas scraper encountered errors.
+2025-05-18 18:11:46,713 - INFO - Some files may have been downloaded.
+2025-05-18 18:11:46,713 - INFO - Check the log file for details: c:\Users\harve\Documents\GitHub\CanvasScrapper\canvas_scraper_20250518_180930.log
+2025-05-18 18:11:46,713 - INFO - ============================================================
